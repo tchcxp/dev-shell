@@ -5,6 +5,11 @@ BLUE="\033[0;36m"
 NO_COLOR="\033[0m"
 
 DEV_FOLDER=$1
+
+if [ $# -ne 1 ]; then
+  DEV_FOLDER=$(pwd)
+fi
+
 cd $DEV_FOLDER
 
 echo $GREEN "Start" $NO_COLOR;
